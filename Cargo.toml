@@ -1,0 +1,23 @@
+[package]
+name = "big_project"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+eframe = "0.29"
+egui = "0.29"
+rfd = "0.15"
+chrono = "0.4"
+
+rusqlite = { version = "0.37.0", features = ["bundled"] }
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[lib]
+name = "flashcards_app"
+path = "src/lib.rs"
+
+[[bin]]
+name = "flashcards"
+path = "src/main.rs"
